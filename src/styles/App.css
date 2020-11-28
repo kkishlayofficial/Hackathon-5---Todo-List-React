@@ -9,6 +9,8 @@ button{
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
 }
 
 .bg-pink{
