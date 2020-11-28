@@ -10,10 +10,11 @@ function App() {
     setNewItem(evt.target.value);
   };
   const saveItem = () => {
-    items.push(newItem);
+	if(newItem.length>0){
+	items.push(newItem);
     setItems([...items]);
 	setNewItem("");
-	console.log(items);
+	}
   };
   const removeItem = (idx) => {
     items.splice(idx, 1);
@@ -22,7 +23,6 @@ function App() {
   const updateItem=(idx,value)=>{
 	  items[idx] = value;
 	  setItems([...items]);
-	  console.log(items);
   }
   return (
     <div id="main">

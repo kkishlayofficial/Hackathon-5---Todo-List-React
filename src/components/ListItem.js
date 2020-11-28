@@ -15,13 +15,14 @@ function ListItem(props) {
     update = evt.target.value;
   };
   const saveTask=()=>{
+      if(update.length>0){
     props.updateItem(props.index,update);
     setEditVal(true);
-    update="";
+    update="";}
   };
   return (
     <div className="list">
-      {props.item}
+      {props.index+1}.{props.item}
       {editVal ?
       <><button className="edit" onClick={edit}>
         Edit
